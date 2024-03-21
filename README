@@ -1,0 +1,35 @@
+Teste-Vaga
+Este é um projeto com intuito de demonstrar minhas habilidades.
+
+Índice
+Foram utilizados  os seguintes recursos: HTML, CSS e JavaScript, Na parte de front-end.
+Back-End utiliza a linguagem PHP para realizar as operações necessárias.
+Foi utilizado para banco de dados a linguagem  MySQL.
+O site foi desenvolvido em ambiente local através do XAMPP.
+
+Estrutura
+A estrutura da aplicação consiste em uma página inicial que apresenta um Login,caso não possua será efetuado
+através do cadastro. A página de login permite o usuário inserir seu email e senha para se autenticar no sistema.
+após o registro o usuario é encaminhado para á pagina do seu perfil
+contendo suas informações pessoais, ao lado esquerdo possui um  menu lateral onde encontram-se
+os icones que encaminham o usuário(a) para diferentes conteudos como:
+
+Home-Mostra quando vai ter à proxima rodada,data,hora,local e os times que vão jogar.
+
+Partidas-Lista todas as partidas já realizadas ou futuras.
+
+Classificação-Tabela mostrando os times por pontuação.
+
+Para instalar o projeto, siga estas etapas:
+
+Copy code
+# Clone este repositório
+$ git clone <https://github.com/enzocdutra/TesteVagaVarzeaCup>
+# Baixe o XAMPP.
+# Instale o Apache e o MySQL no seu computador
+# envie o arquivo para pasta  "htdocs" do xampp.
+# Abra o phpMyAdmin e exporte o arquivo SQL chamado "formulario-user.SQL
+# Após isso digite a seguinte sequencia localhost/test/login.php
+# Faça seu registro e aproveite.
+
+
