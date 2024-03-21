@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gerador de Resultados</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        color: white;
+        background-color: black;
+    }
+    input[type="text"] {
+        margin-bottom: 10px;
+    }
+    button {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    button a{
+        text-decoration: none;
+        color: white;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+    #resultado {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+
+<button ><a href="index.php">Voltar</a></button>
+
+<h1>Gerador de Resultados</h1>
+
+<div>
+    <label for="timeA">Nome do Time A:</label><br>
+    <input type="text" id="timeA" placeholder="Digite o nome do Time A"><br>
+    <label for="timeB">Nome do Time B:</label><br>
+    <input type="text" id="timeB" placeholder="Digite o nome do Time B"><br>
+    <button onclick="iniciarJogo()">Iniciar Jogo</button>
+</div>
+
+<div id="resultado"></div>
+
+<script>
+    function iniciarJogo() {
+        var timeA = document.getElementById("timeA").value;
+        var timeB = document.getElementById("timeB").value;
+        var golA = Math.floor(Math.random() * 6); // Gols do Time A (0 a 5)
+        var golB = Math.floor(Math.random() * 6); // Gols do Time B (0 a 5)
+
+        // Exibindo o resultado
+        var resultado = document.getElementById("resultado");
+        resultado.innerHTML = "<p>" + timeA + " " + golA + " - " + golB + " " + timeB + "</p>";
+        
+        // Verificando o vencedor
+        if (golA > golB) {
+            resultado.innerHTML += "<p>" + timeA + " venceu!</p>";
+        } else if (golB > golA) {
+            resultado.innerHTML += "<p>" + timeB + " venceu!</p>";
+        } else {
+            resultado.innerHTML += "<p>O jogo terminou em empate!</p>";
+        }
+    }
+</script>
+
+</body>
+</html>
